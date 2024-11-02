@@ -1,0 +1,21 @@
+﻿@model _2109.Models.User
+
+<h2>Информация о пользователе</h2>
+
+@if (Model == null)
+{
+    <p>Модель пользователя не определена.</p>
+}
+else
+{
+    <!-- Подход 1: Используем ViewBag -->
+    <p>Имя: @ViewBag.UserName</p>
+    <p>Email: @ViewBag.UserEmail</p>
+
+    <!-- Подход 2: Используем ViewData -->
+    <p>Идентификатор: @ViewData["UserId"]</p>
+
+    <!-- Подход 3: Используем модель -->
+    <p>Имя (модель): @Model.Name</p>
+    <p>Email (модель): @Model.Email</p>
+}
